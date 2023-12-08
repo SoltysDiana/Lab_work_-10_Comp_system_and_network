@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+file_path="job.txt"
+
+
+email_regex="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
+
+
+if [ -f "$file_path" ]; then
+  
+  emails=$(grep -E -o "$email_regex" "$file_path")
+
+  
+  if [ -n "$emails" ]; then
+    echo "Знайдені електронні адреси:"
+    echo "$emails"
+  else
+    echo "Електронні адреси не знайдені в файлі."
+  fi
+else
+  echo "Файл '$file_path' не існує."
+fi
