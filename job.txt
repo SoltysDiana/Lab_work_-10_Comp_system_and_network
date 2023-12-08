@@ -1,0 +1,14 @@
+mkdir Soltys
+cd Soltys
+mkdir Diana Soltys
+mkdir KI405
+mkdir VARJ 
+cd Diana Soltys
+touch email.txt
+cd ..
+cd KI405 
+touch data.txt
+echo "07.12.23 KI-405" >> data.txt
+cd .. 
+cd Diana Soltys
+echo "soltisdiana091@gmail.com" >> email.txt
